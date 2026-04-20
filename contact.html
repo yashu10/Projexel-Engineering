@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Projexel Engineering</title>
+    <meta name="description" content="Get in touch with Projexel Engineering for turnkey project solutions, mechanical engineering, and fabrication services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        .contact-info-card {
+            padding: 3rem;
+            height: 100%;
+        }
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--clr-primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .info-content h4 {
+            font-family: var(--font-heading);
+            margin-bottom: 0.5rem;
+            color: var(--clr-text);
+        }
+        .info-content p, .info-content a {
+            color: var(--clr-text-muted);
+            text-decoration: none;
+        }
+        .contact-form-card {
+            padding: 3rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--clr-text);
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.5);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--clr-primary);
+            box-shadow: 0 0 0 4px rgba(8, 65, 108, 0.1);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        @media (max-width: 992px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <script src="components/header.js"></script>
+
+    <!-- Page Header -->
+    <header class="page-header pattern-bg">
+        <div class="container">
+            <h1 class="page-title fade-in-up">Contact <span class="text-gradient">Us</span></h1>
+            <p class="page-subtitle fade-in-up delay-1">Let's discuss how we can bring your next industrial project to life.</p>
+        </div>
+    </header>
+
+    <section class="contact-section" style="padding: 100px 0; background-color: var(--clr-surface-light);">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info slide-in-left">
+                    <div class="glass-panel contact-info-card">
+                        <span class="section-tag">Get in Touch</span>
+                        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Contact Information</h2>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Our Office</h4>
+                                <p>123 Industrial Avenue<br>Engineering District, Tech City 45000</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+18005550199">+1 (800) 555-0199</a></p>
+                                <p><a href="tel:+18005550200">+1 (800) 555-0200</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:contact@projexel.com">contact@projexel.com</a></p>
+                                <p><a href="mailto:projects@projexel.com">projects@projexel.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <div class="info-content">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form slide-in-right">
+                    <div class="glass-panel contact-form-card">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">Send us a Message</h3>
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="john@company.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-control" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder Section -->
+    <section class="map-section" style="height: 450px; background-color: var(--clr-bg);">
+        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f0f4f8; color: var(--clr-text-muted);">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🗺️</div>
+                <p>Google Maps Integration Placeholder</p>
+                <p style="font-size: 0.8rem;">(Real map would be embedded here via iframe)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <script src="components/footer.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
