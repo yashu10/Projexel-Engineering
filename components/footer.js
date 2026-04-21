@@ -17,9 +17,9 @@ document.write(`
             </div>
             <div class="footer-contact">
                 <h4>Contact Us</h4>
-                <p>123 Industrial Avenue<br>Engineering District, Tech City 45000</p>
-                <p>Email: <a href="mailto:contact@projexel.com">contact@projexel.com</a></p>
-                <p>Phone: +1 (800) 555-0199</p>
+                <p>1004, Sudarshan Saket, Behind Godrej Garden City,<br>Chainpur Road, Jagatpur, Ahmedabad – 382470</p>
+                <p>Email: <a href="mailto:projexel.engr@gmail.com">projexel.engr@gmail.com</a></p>
+                <p>Phone: <a href="tel:+918000369880">+91 80003 69880</a></p>
             </div>
         </div>
         <div class="footer-bottom container">

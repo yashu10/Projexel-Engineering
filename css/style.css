@@ -705,6 +705,10 @@ img {
     flex-direction: column;
 }
 
+.portfolio-card.hide {
+    display: none;
+}
+
 .portfolio-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px -10px rgba(8, 65, 108,0.15);

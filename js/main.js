@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize UI scripts now that header/footer are synchronously injected
     initNavbar();
     initFooter();
+    initPortfolioFilters();
     initIntersectionObservers();
 
     function initFooter() {
@@ -301,12 +302,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const images = data.images || ["assets/images/service_turnkey.png"];
             images.forEach((img, index) => {
                 const slide = document.createElement('div');
-                slide.className = `modal-carousel-slide ${index === 0 ? 'active' : ''}`;
-                slide.style.backgroundImage = `url('${img}')`;
+                slide.className = `modal-carousel-slide \${index === 0 ? 'active' : ''}`;
+                slide.style.backgroundImage = `url('\${img}')`;
                 carouselContainer.insertBefore(slide, navContainer);
 
                 const dot = document.createElement('div');
-                dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+                dot.className = `carousel-dot \${index === 0 ? 'active' : ''}`;
                 dot.addEventListener('click', () => goToSlide(index));
                 navContainer.appendChild(dot);
             });
@@ -317,14 +318,14 @@ document.addEventListener('DOMContentLoaded', () => {
             for (const [key, value] of Object.entries(data.specs)) {
                 specsContainer.innerHTML += `
                     <div class="modal-spec-item">
-                        <h5>${key}</h5>
-                        <p>${value}</p>
+                        <h5>\${key}</h5>
+                        <p>\${value}</p>
                     </div>
                 `;
             }
             // Fill Scope
             data.scope.forEach(item => {
-                scopeContainer.innerHTML += `<li>${item}</li>`;
+                scopeContainer.innerHTML += `<li>\${item}</li>`;
             });
         } else {
             // Fallback
@@ -336,6 +337,38 @@ document.addEventListener('DOMContentLoaded', () => {
             specsContainer.innerHTML = '<p style="grid-column: span 2; color: var(--clr-text-muted);">Detailed technical specifications available upon request.</p>';
             scopeContainer.innerHTML = '<li>Comprehensive Engineering & Execution</li><li>Quality Control & Safety Compliance</li>';
         }
+    }
+
+    function initPortfolioFilters() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.portfolio-card');
+
+        if (filterBtns.length === 0 || projects.length === 0) return;
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    const category = project.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === category) {
+                        project.classList.remove('hide');
+                        // Trigger a small animation
+                        project.style.opacity = '0';
+                        setTimeout(() => {
+                            project.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        project.classList.add('hide');
+                    }
+                });
+            });
+        });
     }
 
     function goToSlide(index) {
