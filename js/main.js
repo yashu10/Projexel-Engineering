@@ -132,62 +132,78 @@ document.addEventListener('DOMContentLoaded', () => {
     // Project Modal Logic
     const projectDetails = {
         "RO, ETP & ZLD Plant": {
+            images: ["assets/images/proj_water.png", "assets/images/service_industrial.png", "assets/images/service_turnkey.png"],
             specs: { "Capacity": "500 m3/day", "Materials": "SS316, HDPE", "Standards": "ASME BPVC", "Timeline": "8 Months" },
             scope: ["Precision Equipment Erection", "High-pressure Piping Systems", "DCS/PLC Control Logic Integration", "ZLD System Optimization"]
         },
         "250 KL Soft Water Tank": {
+            images: ["assets/images/service_turnkey.png", "assets/images/service_mechanical.png", "assets/images/service_industrial.png"],
             specs: { "Volume": "250 Kilolitres", "Process": "ARC Welding", "Finish": "Epoxy Interior Lining", "Testing": "Hydro-testing @ 1.5x" },
             scope: ["Shop Fabrication of MS Shells", "On-site Segmental Assembly", "Sandblasting & Multi-layer Coating", "In-situ Foundation Anchoring"]
         },
         "Clarifier & Tertiary System": {
+            images: ["assets/images/service_industrial.png", "assets/images/service_mep.png", "assets/images/proj_water.png"],
             specs: { "Type": "High-rate Clarifier", "Flow": "200 m3/hr", "Automation": "Fully Automated Sludge Scraper", "Power": "15 HP Aggregator" },
             scope: ["Dismantling of Legacy Infrastructure", "Structural Steel Framework Construction", "Precision Gearbox & Scraper Erection", "Instrumentation & Level Control Setup"]
         },
         "ETP / ZLD Plant E&I": {
+            images: ["assets/images/service_ei.png", "assets/images/service_oilgas.png", "assets/images/service_electrical.png"],
             specs: { "Voltage": "415V / 230V", "Cable Type": "Armoured FRLS", "Control": "Siemens S7-1200 PLC", "Instruments": "Yokogawa / Endress+Hauser" },
             scope: ["Main LT Panel Installation", "Field Instrumentation Mounting", "Cable Tray & Loop Testing", "SCADA Screen Development"]
         },
         "RO / DM Plant E&I": {
+            images: ["assets/images/service_ei.png", "assets/images/service_industrial.png", "assets/images/service_mep.png"],
             specs: { "Analyzers": "pH, ORP, Conductivity", "Panels": "IP65 Stainless Steel", "Drives": "VFD Control for Pumps", "Protocols": "Profibus / Modbus" },
             scope: ["MCC & VFD Panel Commissioning", "Instrument Calibration & Loop Checks", "Earthing & Lightning Protection", "Plant Earthing Layout Optimization"]
         },
         "Agitated Thin Film Dryer (ATFD)": {
+            images: ["assets/images/service_mechanical.png", "assets/images/service_industrial.png", "assets/images/service_turnkey.png"],
             specs: { "Heat Area": "12 m2", "Material": "SS316L (Internal)", "Sealing": "Mechanical Double Seal", "Drive": "Top-entry Vertical" },
             scope: ["Complex Structure Fabrication", "High-alignment Top Drive Erection", "Jacketed Piping for Steam", "Thermal Insulation & Cladding"]
         },
         "Product ETP Plant": {
+            images: ["assets/images/service_turnkey.png", "assets/images/proj_water.png", "assets/images/service_mep.png"],
             specs: { "Sector": "F&B (Beverage)", "Standard": "TPM / HACCP Compatible", "Pumps": "Centrifugal / Progressive Cavity", "Controls": "Allen Bradley PLC" },
             scope: ["Piping Layout for Food Grade Standards", "Instrument Cabling & Termination", "Testing of Auto-dosage Systems", "Commissioning with Product Simulation"]
         },
         "Wilmar ETP Plant Phase II": {
+            images: ["assets/images/service_industrial.png", "assets/images/service_mechanical.png", "assets/images/service_oilgas.png"],
             specs: { "Phase": "Expansion (Brownfield)", "Piping": "MS/SS Network", "Support": "Heavy Duty Racks", "Standards": "OISD / Petroleum Safety" },
             scope: ["Mechanical Equipment Tie-ins", "Live Plant Piping Extension", "Fabrication of Specialized Skids", "Final Handover & Operator Training"]
         },
         "Integrated RO / ZLD Framework": {
+            images: ["assets/images/proj_water.png", "assets/images/service_turnkey.png", "assets/images/service_industrial.png"],
             specs: { "Turnkey": "Complete EPC", "System": "High Recovery RO", "Reject": "Thermal Evaporation", "Quality": "Zero Surface Discharge" },
             scope: ["Civil Foundation Coordination", "Skid-mounted RO Erection", "Crystallizer & MEE Installation", "End-to-end Process Commissioning"]
         },
         "Suzuki Plant Power Dist.": {
+            images: ["assets/images/service_ei.png", "assets/images/service_oilgas.png", "assets/images/hero_bg.png"],
             specs: { "Sector": "Automotive", "Transformers": "2 MVA Dry Type", "Switchgear": "Gas Insulated (GIS)", "Relays": "Numerical Protection" },
             scope: ["High Tension (HT) Cable Laying", "Substation Component Mounting", "Logic Testing for Bus-couplers", "Safety Audit & Energization"]
         },
         "Heavy PEB Structure Construction": {
+            images: ["assets/images/service_industrial.png", "assets/images/service_mechanical.png", "assets/images/service_turnkey.png"],
             specs: { "Span": "24 Meters Clear", "Tonnage": "120 Metric Tons", "Cladding": "Galvalume Profile", "Coating": "PU Paint Process" },
             scope: ["PEB Component Supply Management", "Precision Column Bolting", "Roof & Wall Sheeting Installation", "Safety Netting & Erection Compliance"]
         },
         "Mechanical & Fabrication ARC": {
+            images: ["assets/images/service_mechanical.png", "assets/images/service_industrial.png", "assets/images/service_turnkey.png"],
             specs: { "Mode": "Annual Rate Contract", "Response": "24/7 Priority", "Workforce": "Skilled Fitters & Welders", "Equip": "Mobile Heavy Crane Support" },
             scope: ["On-call Structural Reinforcements", "Emergency Pipe Leak Repairs", "New Equipment Base Foundations", "Routine Maintenance Shutdowns"]
         },
         "E&I Annual Rate Contract": {
+            images: ["assets/images/service_ei.png", "assets/images/service_oilgas.png", "assets/images/service_industrial.png"],
             specs: { "Support": "Continuous Upkeep", "Audits": "Thermal Imaging / Earthing", "Inventory": "Critical Spares Management", "Upgrades": "Control Logic Optimization" },
             scope: ["Switchyard Periodic Maintenance", "Instrument Recalibration Cycles", "Power Quality Analysis", "Minor Expansion Projects Execution"]
         },
         "Core E&I Upgrades": {
+            images: ["assets/images/service_ei.png", "assets/images/service_oilgas.png", "assets/images/service_mep.png"],
             specs: { "Sector": "Chemical / Fertilizer", "Hazards": "Corrosive Environment", "Protection": "Ex-proof (Flameproof)", "Control": "Remote I/O Stations" },
             scope: ["Old Control Cable Replacement", "Smart Positioner Integration", "Hazardous Area Glanding", "DCS Logic Hot-cutover Management"]
         }
     };
+
+    let carouselInterval;
 
     function initProjectModals() {
         // Inject Modal Structure if not present
@@ -197,7 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="modal-container">
                         <button class="modal-close" aria-label="Close modal">&times;</button>
                         <div class="modal-content">
-                            <div id="modalImg" class="modal-img-banner"></div>
+                            <div class="modal-carousel-container" id="modalCarousel">
+                                <!-- Slides injected here -->
+                                <div class="carousel-nav" id="carouselNav"></div>
+                            </div>
                             <div class="modal-body">
                                 <span id="modalClient" class="modal-client"></span>
                                 <h3 id="modalTitle" class="modal-title"></h3>
@@ -236,9 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const title = card.querySelector('.portfolio-title').textContent.trim();
                 const client = card.querySelector('.client-name') ? card.querySelector('.client-name').textContent : 
                              (card.querySelector('.portfolio-meta') ? card.querySelector('.portfolio-meta span:last-child').textContent : "Projexel Client");
-                const img = card.querySelector('.portfolio-img').style.backgroundImage;
                 
-                populateModal(title, client, img);
+                populateModal(title, client);
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
@@ -248,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeModal = () => {
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
+            if (carouselInterval) clearInterval(carouselInterval);
         };
 
         closeBtn.addEventListener('click', closeModal);
@@ -259,20 +278,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function populateModal(title, client, img) {
+    function populateModal(title, client) {
         document.getElementById('modalTitle').textContent = title;
         document.getElementById('modalClient').textContent = client;
-        document.getElementById('modalImg').style.backgroundImage = img;
 
+        const carouselContainer = document.getElementById('modalCarousel');
+        const navContainer = document.getElementById('carouselNav');
         const specsContainer = document.getElementById('modalSpecs');
         const scopeContainer = document.getElementById('modalScope');
         
+        // Clear previous content
+        const oldSlides = carouselContainer.querySelectorAll('.modal-carousel-slide');
+        oldSlides.forEach(s => s.remove());
+        navContainer.innerHTML = '';
         specsContainer.innerHTML = '';
         scopeContainer.innerHTML = '';
 
         const data = projectDetails[title];
         
         if (data) {
+            // Setup Carousel
+            const images = data.images || ["assets/images/service_turnkey.png"];
+            images.forEach((img, index) => {
+                const slide = document.createElement('div');
+                slide.className = `modal-carousel-slide ${index === 0 ? 'active' : ''}`;
+                slide.style.backgroundImage = `url('${img}')`;
+                carouselContainer.insertBefore(slide, navContainer);
+
+                const dot = document.createElement('div');
+                dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(index));
+                navContainer.appendChild(dot);
+            });
+
+            startAutoPlay(images.length);
+
             // Fill Specs
             for (const [key, value] of Object.entries(data.specs)) {
                 specsContainer.innerHTML += `
@@ -287,10 +327,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 scopeContainer.innerHTML += `<li>${item}</li>`;
             });
         } else {
-            // Fallback for generic data
+            // Fallback
+            const slide = document.createElement('div');
+            slide.className = 'modal-carousel-slide active';
+            slide.style.backgroundImage = "url('assets/images/service_turnkey.png')";
+            carouselContainer.insertBefore(slide, navContainer);
+            
             specsContainer.innerHTML = '<p style="grid-column: span 2; color: var(--clr-text-muted);">Detailed technical specifications available upon request.</p>';
             scopeContainer.innerHTML = '<li>Comprehensive Engineering & Execution</li><li>Quality Control & Safety Compliance</li>';
         }
+    }
+
+    function goToSlide(index) {
+        const slides = document.querySelectorAll('.modal-carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        if (slides[index]) slides[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
+    }
+
+    function startAutoPlay(count) {
+        if (carouselInterval) clearInterval(carouselInterval);
+        if (count <= 1) return;
+
+        let current = 0;
+        carouselInterval = setInterval(() => {
+            current = (current + 1) % count;
+            goToSlide(current);
+        }, 3000);
     }
 
     initProjectModals();
