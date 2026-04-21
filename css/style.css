@@ -883,15 +883,32 @@ img {
     padding-left: 5px;
 }
 
-.footer-contact p {
-    color: var(--clr-text-muted);
-    margin-bottom: 0.75rem;
+.footer-contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
 }
 
-.footer-contact a {
-    color: var(--clr-text-muted);
+.footer-contact-item i {
+    color: var(--clr-primary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
-.footer-contact a:hover {
+
+.footer-contact-item p {
+    color: var(--clr-text-muted);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.footer-contact-item a {
+    color: var(--clr-text-muted);
+    transition: var(--transition);
+}
+
+.footer-contact-item a:hover {
     color: var(--clr-primary);
 }
 

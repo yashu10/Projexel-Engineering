@@ -17,9 +17,18 @@ document.write(`
             </div>
             <div class="footer-contact">
                 <h4>Contact Us</h4>
-                <p>1004, Sudarshan Saket, Behind Godrej Garden City,<br>Chainpur Road, Jagatpur, Ahmedabad – 382470</p>
-                <p>Email: <a href="mailto:projexel.engr@gmail.com">projexel.engr@gmail.com</a></p>
-                <p>Phone: <a href="tel:+918000369880">+91 80003 69880</a></p>
+                <div class="footer-contact-item">
+                    <i class="ri-map-pin-2-line"></i>
+                    <p>1004, Sudarshan Saket, Behind Godrej Garden City,<br>Chainpur Road, Jagatpur, Ahmedabad – 382470</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ri-mail-line"></i>
+                    <p><a href="mailto:projexel.engr@gmail.com">projexel.engr@gmail.com</a></p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ri-phone-line"></i>
+                    <p><a href="tel:+918000369880">+91 80003 69880</a></p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom container">
