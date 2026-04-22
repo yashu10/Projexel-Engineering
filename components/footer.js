@@ -13,7 +13,7 @@ document.write(`
                 <a href="services.html">Our Services</a>
                 <a href="projects.html">Portfolio</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="index.html#careers">Careers</a>
+               
             </div>
             <div class="footer-contact">
                 <h4>Contact Us</h4>
@@ -34,9 +34,12 @@ document.write(`
         <div class="footer-bottom container">
             <p>&copy; <span id="year"></span> Projexel Engineering. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" aria-label="LinkedIn">LI</a>
-                <a href="#" aria-label="Twitter">TW</a>
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
             </div>
         </div>
     </footer>
+    <a href="https://wa.me/918000369880" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+    </a>
 `);
